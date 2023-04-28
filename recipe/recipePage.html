@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title class="receip-titel">Awesome Recipes </title>
+    <link rel="stylesheet" href="recipe.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">Wonderful Tomato Basil Penne Pasta Recipe</h1>
+        <nav class="nav-container">
+            <a href="">Home</a>
+            <a href="">Recipe</a>
+            <a href="">About</a>
+        </nav>
+    </header>
+
+    <section class="section-container ">
+        <side class="side-container ">
+            <img class=recipe-image src="penneRecipe.jpg" alt="Tomato Basil Pic">
+            <p>Back To Landig Page <a href="landingPage.html">here</a>.</p>
+        </side>
+        <main class="main-container">
+            <section class="ingredient">
+                <h3>Ingredients</h3>
+                <label for="servings">Number of Servings:</label>
+                <input type="number" id="servings" name="servings" min="1" value="4">
+                <ul id="ingredients-list">
+                    <li id="pasta">1 pound penne pasta</li>
+                    <li id="tomatoes">4 ripe tomatoes, diced</li>
+                    <li id="garlic">4 cloves garlic, minced</li>
+                    <li id="oil">1/4 cup olive oil</li>
+                    <li id="basil">1/4 cup fresh basil, chopped</li>
+                    <li id="salt">Salt and pepper to taste</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Instructions</h3>
+                <ol class="instruction-steps">
+                    <li>Cook the penne pasta according to package instructions. Drain and set aside.</li>
+                    <li>Heat the olive oil in a pan over medium heat. Add the garlic and sauté for 1-2 minutes, or until
+                        fragrant.</li>
+                    <li>Add the diced tomatoes to the pan and sauté for 5-7 minutes, or until they start to break down
+                        and become saucy.</li>
+                    <li>Add the cooked penne pasta to the pan and toss to combine with the tomato sauce.</li>
+                    <li>Stir in the chopped basil and season with salt and pepper to taste.</li>
+                    <li>Serve immediately, garnished with additional basil if desired.</li>
+                </ol>
+            </section>
+        </main>
+        <section>
+            <form id="review-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="rating">Rating:</label>
+
+                <select id="rating" name="rating" required>
+                    <option value="">-- Select a rating --</option>
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="5">5 Stars</option>
+                </select>
+
+                <label for="review">Review:</label>
+                <textarea id="review" name="review" required></textarea>
+
+                <button type="submit">Submit Review</button>
+            </form>
+
+            <div id="reviews">
+                <h3>Reviews</h3>
+                <ul>
+                    <li>
+                        <strong>Leila Amrayi:</strong>
+                        <span class="rating">5 Stars</span>
+                        <p class="review">This pasta was amazing! I will definitely be making it again.</p>
+                    </li>
+                    <li>
+                        <strong>Jane Smith:</strong>
+                        <span class="rating">4 Stars</span>
+                        <p class="review">This pasta was pretty good, but I felt like it needed more seasoning.</p>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+        <div class="image-gallery">
+            <h3>Penne Pasta Gallery</h3>
+            <div class="gallery-container">
+                <img src="penne1.jpg" alt="Penne Pasta Image">
+                <img src="penne2.jpg" alt="Penne Pasta Image">
+                <img src="penne3.jpg" alt="Penne Pasta Image">
+            </div>
+        </div>
+</body>
+
+</html>

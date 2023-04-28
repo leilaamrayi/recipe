@@ -1,0 +1,353 @@
+/* Default styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #040404;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-container>a {
+  background-color: #ff5722;
+  margin: 1rem;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  flex: 1 0 30px;
+  border-radius: .3em;
+  overflow: hidden;
+  color: black;
+}
+
+
+/* unvisited link */
+.nav-container>a:link {
+  color: white;
+}
+
+/* mouse over link */
+.nav-container>a:hover {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+/* selected link */
+.nav-container>a:active {
+  color: yellow;
+}
+
+
+.section-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 60vh;
+}
+
+
+.main-container,
+.form-input {
+  flex: 65%;
+  background-color: white;
+  padding: 10px;
+  flex-flow: column wrap;
+  float: left;
+
+}
+
+.side-container,
+.form-lable {
+  flex: 35%;
+  background-color: white;
+  padding: 10px;
+  margin: 0;
+  float: left;
+}
+
+.side-container>a {
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: space-around;
+  display: flex;
+  margin: .8rem;
+  text-align: left;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.side-container>a:hover {
+  color: rgb(75, 73, 73);
+  font-size: 20px;
+  text-decoration: underline;
+
+}
+
+.side-container>img {
+  width: 100%;
+  padding: 10px;
+}
+
+
+.header-title {
+  background-color: #ff5722;
+  font-size: 20px;
+  color: #000000;
+  text-align: center;
+  padding: 1rem;
+  margin: 0px;
+}
+
+.recipe-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.recipe-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+.instruction-steps {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Styles for the review form */
+#review-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#review-form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#review-form input,
+#review-form select,
+#review-form textarea {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+#review-form button[type="submit"] {
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Styles for the reviews section */
+#reviews {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#reviews h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#reviews ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#reviews li {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+#reviews li strong {
+  font-weight: bold;
+}
+
+#reviews li .rating {
+  color: #f39c12;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+#reviews li .review {
+  margin: 10px 0;
+}
+
+.image-gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.image-gallery h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-container img {
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+}
+
+
+ /* Styles for mobile devices */
+@media only screen and (max-width: 600px) {
+
+   .nav-container .section-container {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  .nav-container>a {
+    flex: 1 0 100%;
+    margin: 0.5rem;
+  }
+
+  .side-container {
+    flex: 100%;
+  }
+
+  .side-container>a {
+    width: 100%;
+    margin: 0.5rem;
+  }
+
+  #review-form {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  #review-form input,
+  #review-form select,
+  #review-form textarea {
+    font-size: 16px;
+  }
+
+  #reviews {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  #reviews h2 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  #reviews li {
+    padding: 5px;
+  }
+
+  .gallery-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-container img {
+    width: 80%;
+    height: auto;
+    margin: 10px 0;
+  }
+}
+
+ /* Styles for tablet devices */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+   .nav-container>a {
+    flex: 1 0 30%;
+    margin: 0.5rem;
+  }
+
+  .side-container>a {
+    width: 100%;
+    margin: 0.5rem;
+  }
+
+  #review-form {
+    max-width: 90%;
+  }
+
+  #reviews {
+    max-width: 90%;
+  }
+
+  .gallery-container img {
+    width: 45%;
+    height: auto;
+    margin: 10px;
+  }
+}
+
+
+/* Styles for desktop devices */
+
+@media only screen and (min-width: 1025px) {
+    .nav-container {
+    justify-content: space-around;
+  }
+
+  .nav-container>a {
+    flex: 1 0 150px;
+    margin: 1rem;
+  }
+
+  .side-container {
+    flex: 30%;
+    margin: 0;
+  }
+
+  .side-container>a {
+    width: 50%;
+    margin: 0.8rem;
+  }
+
+  #review-form {
+    max-width: 600px;
+  }
+
+  #reviews {
+    max-width: 800px;
+  }
+
+  .gallery-container img {
+    width: 30%;
+    height: auto;
+    margin: 10px;
+  }
+}
